@@ -4,5 +4,7 @@ def snippet_content():
     return (title + '\n' + text)
 
 def add_snippet():
-    with open('./snipets_data/snipets.csv', 'a', encoding = 'utf-8') as data:
+    with open('attestation_work_Nikulin\snippets_data\snippets.csv', 'a', encoding = 'utf-8') as data:
         data.write(snippet_content())
+        print('\n Заметка успешно сохранена!')
+        print()
