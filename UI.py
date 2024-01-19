@@ -21,13 +21,14 @@ def user_interface():
 
         match cmd:
             case '1':
-                add_snippet()
+                snippet_title = input('Введите название заметки: ')
+                add_snippet(snippet_title)
 
             case '2':
                 read_snippets()
 
-            #     case '3':
-            #         search_contacts()
+            case '3':
+                read_snippets()
 
             #     case '4':
             #         print('До свидания!')
