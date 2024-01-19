@@ -1,3 +1,5 @@
+from functions import CreateNewSnippet
+
 cmd = 0
 
 def user_interface():
@@ -8,9 +10,22 @@ def user_interface():
             '3. Редактировать заметку\n'
             '4. Удалить заметку\n'
             '5. Выход\n')
-        cmd = input('Введите номер операции: ')
+        cmd = int(input('Введите номер операции: '))
         print()
 
         while cmd not in ('1', '2', '3', '4', '5'):
             print('Некорректный ввод')
-            cmd = input('Введите номер операции: ')
+            cmd = int(input('Введите номер операции: '))
+
+            match cmd:
+                case '1':
+                    add_snippet()
+
+                case '2':
+                    print_contacts()
+
+                case '3':
+                    search_contacts()
+                
+                case '4':
+                    print('До свидания!')
