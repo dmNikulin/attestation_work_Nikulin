@@ -1,5 +1,6 @@
 from functions.CreateNewSnippet import *
 from functions.ShowAllSnippets import *
+from functions.EditSnippet import *
 
 
 def user_interface():
@@ -8,7 +9,7 @@ def user_interface():
     while cmd != '5':
         print('Меню:\n'
               '1. Новая заметка\n'
-              '2. Вывести заметки\n'
+              '2. Cписок заметок\n'
               '3. Редактировать заметку\n'
               '4. Удалить заметку\n'
               '5. Выход\n')
@@ -25,10 +26,11 @@ def user_interface():
                 add_snippet(snippet_title)
 
             case '2':
-                read_snippets()
+               show_all_snippets()
 
             case '3':
-                read_snippets()
-
+                edit_snippets()
+                # with open('attestation_work_Nikulin\snippets_data\dsfg.csv','a') as data:
+                #     data.write(input())
             #     case '4':
             #         print('До свидания!')

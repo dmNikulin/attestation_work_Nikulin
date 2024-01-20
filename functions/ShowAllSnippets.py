@@ -1,7 +1,17 @@
-def data_read():
-    with open('attestation_work_Nikulin\snippets_data\snippets.csv', 'r', encoding = 'utf-8') as data:
-        return data.read()
+import os
 
-def read_snippets():
-    data = data_read()
-    print(data)
+
+def show_all_snippets():
+    # Указываем путь к директории
+    directory = "attestation_work_Nikulin/snippets_data/"
+
+    # Получаем список файлов
+    files = os.listdir(directory)
+
+    number_of_snippet = 0
+
+    for i in files:
+        number_of_snippet += 1
+        print(f'{number_of_snippet}) {i}')
+
+    print()
