@@ -1,6 +1,7 @@
 from functions.CreateNewSnippet import *
 from functions.ShowAllSnippets import *
 from functions.EditSnippet import *
+from functions.DeleteFile import *
 
 
 def user_interface():
@@ -30,7 +31,6 @@ def user_interface():
 
             case '3':
                 edit_snippets()
-                # with open('attestation_work_Nikulin\snippets_data\dsfg.csv','a') as data:
-                #     data.write(input())
-            #     case '4':
-            #         print('До свидания!')
+
+            case '4':
+                deleteFile()
